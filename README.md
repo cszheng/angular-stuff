@@ -1,0 +1,1 @@
+Restaurant App UI Only. Fake REST calls and all static files.
