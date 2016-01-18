@@ -1,5 +1,5 @@
 #compile less
-lessc static/stylesheets/style.less static/stylesheets/style.css
+lessc stylesheets/style.less stylesheets/style.css
 
 #open chrome
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files

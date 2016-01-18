@@ -1,0 +1,76 @@
+<div ng-controller="navigationCtrl as ctrl">
+  <div id="brand-header" class="brand-container">
+    <div class="padded-row">
+      <div class="col-md-8">
+        <div class="brand-text">
+          <h1>
+            Rice Mac
+          </h1>
+          <h6>
+            I Love Rice
+          </h6>
+        </div>      
+      </div>
+      <div class="col-md-4">
+        <div class="col-md-6">
+          <p>
+            <div class="row">          
+              <b>Store Hours:</b>
+            </div>
+            <div class="row">      
+              Monday - Thursday: 11am-10pm
+            </div>
+            <div class="row">
+              Friday - Saturday: 11am-10:30pm
+            </div>
+            <div class="row">
+              Sunday: 12pm-10pm
+            </div>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <div class="row">
+              <b>Call Us:</b><br />
+            </div>
+            <div class="row">
+              <a href="tel:1-404-963-1266">
+                1-404-963-1266
+              </a>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav id="header-nav" class='navbar navbar-default' ng-class="{' navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
