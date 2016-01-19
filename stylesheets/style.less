@@ -1,5 +1,10 @@
 @import "bower_components/bootstrap/less/bootstrap";
 
+/*color themes*/
+
+@light-orange: #ffaa56;
+@orange: #eca225;
+
 body {
 	background-image: url("/images/background.jpg");
 	font-color: @gray-dark;
@@ -10,13 +15,11 @@ body {
 	.container-fluid;
 	padding-left: 0px;
 	padding-right: 0px;
-	background-color: #ffaa56;
+	background-color: @light-orange;
 }
 
 .padded-row {
-	.row;
-	margin-left: 15px;
-	margin-right: 15px;
+	.make-row(30);
 }
 
 .brand-text {
@@ -28,4 +31,39 @@ body {
 
 .brand-text h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
+}
+
+/* navigation bar */
+@navbar-default-toggle-hover-bg: darken(@orange, 10%);
+@navbar-default-toggle-border-color: darken(@orange, 10%);				
+
+@navbar-default-bg: @orange;
+
+.btn-link-cust {
+	.button-variant(@gray-dark; @orange; @orange);
+	.border-top-radius(0);
+	.border-right-radius(0);
+	.border-bottom-radius(0);
+	.border-left-radius(0);
+	font-weight: bold;
+}
+
+.btn-group-cust {
+	.btn-group;
+	border-left: 1px solid darken(@orange, 10%);
+	border-right: 1px solid darken(@orange, 10%);
+	@media (max-width: @screen-sm) {
+		width: 150px;
+  }
+}
+
+.nav-dropdown {
+	background-color: @orange;
+	> li > a {
+		color: @gray-darker;
+		font-weight: bold;		
+		&:hover, &.hover, &:focus, &.focus { 
+			background-color: darken(@orange, 10%); 
+		}
+	}
 }

@@ -43,32 +43,43 @@
       </div>
     </div>
   </div>
-  <nav id="header-nav" class='navbar navbar-default' ng-class="{' navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
-    <div class="container">
+  <nav id="header-nav" class='navbar navbar-default' ng-class="{'navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
+    <div class="container-nav">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed" ng-init="navCollapse = true" ng-click = "navCollapse = !navCollapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+      <div id="navbar" class="navbar-collapse collapse" uib-collapse="navCollapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+          <li ng-repeat-start="uiState in ctrl.uiState" ng-if="uiState.nestedOption.length === 0">
+            <div class="btn-group-cust" uib-dropdown>
+              <button id="{{uiState.stateName}}_ddl" class="btn btn-link-cust btn-lg" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
+                {{ctrl.capitalizeUiState(uiState.stateName)}}
+              </button>
+            </div>
+          </li>  
+          <li ng-repeat-end ng-if="uiState.nestedOption.length > 0">
+            <div class="btn-group-cust" uib-dropdown>
+              <button id="{{uiState.stateName}}_ddl" class="btn btn-link-cust btn-lg" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
+                {{ctrl.capitalizeUiState(uiState.stateName)}}
+              </button>
+              <button class="btn btn-link-cust btn-lg" uib-dropdown-toggle>
+                <span class="caret"></span>
+                <span class="sr-only">Split button!</span>
+              </button>
+              <ul class="nav-dropdown" role="menu" aria-labelledby="{{uiState.stateName}}_ddl" uib-dropdown-menu>
+                <li role="menuitem" ng-repeat="nestedOption in uiState.nestedOption" ui-sref="{{uiState.stateName}}({param1: nestedOption.optionName})">
+                  <a href="#">
+                    {{ctrl.capitalizeUiState(nestedOption.optionName)}}
+                  </a>
+                </li>
+              </ul>
+            </div>           
+          </li>          
         </ul>
       </div><!--/.nav-collapse -->
     </div>

@@ -3,3 +3,6 @@ lessc stylesheets/style.less stylesheets/style.css
 
 #open chrome
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
+
+#run simple static server
+python -m http.server 8000

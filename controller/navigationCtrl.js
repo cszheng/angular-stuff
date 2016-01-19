@@ -1,9 +1,13 @@
 app.controller('navigationCtrl', ['$window', '$scope', 'uiStateSvc', function($window, $scope, uiStateSvc) {
 	var self = this;
 	//variables bound to controller
-	self.brandSize = null;
 	self.uiState = null;
-	//items to be ran once
+	//functions bound to controller
+	self.capitalizeUiState = function(stateName) {
+		return stateName.replace(/\w\S*/g, function(text) {
+        return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+    });
+	}
 	//retrieve uiState from services
 	uiStateSvc
 		.getUiState()
