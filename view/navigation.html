@@ -46,14 +46,14 @@
   <nav id="header-nav" class='navbar navbar-default' ng-class="{'navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
     <div class="container-nav">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" ng-init="navCollapse = true" ng-click = "navCollapse = !navCollapse">
+        <button type="button" class="navbar-toggle collapsed" ng-click="ctrl.toggleCollapse()">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div id="navbar" class="navbar-collapse collapse" uib-collapse="navCollapse">
+      <div id="navbar" class="navbar-collapse collapse" uib-collapse="ctrl.collapseNav">
         <ul class="nav navbar-nav">
           <li ng-repeat-start="uiState in ctrl.uiState" ng-if="uiState.nestedOption.length === 0">
             <div class="btn-group-cust" uib-dropdown>
