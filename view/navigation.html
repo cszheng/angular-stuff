@@ -43,8 +43,8 @@
       </div>
     </div>
   </div>
-  <nav id="header-nav" class='navbar navbar-default' ng-class="{'navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
-    <div class="container-nav">
+  <nav id="header-nav" class='navbar navbar-cust' ng-class="{'navbar-fixed-top' : outOfView, 'navbar-static-top': !outOfView}">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" ng-click="ctrl.toggleCollapse()">
           <span class="sr-only">Toggle navigation</span>
@@ -57,17 +57,17 @@
         <ul class="nav navbar-nav">
           <li ng-repeat-start="uiState in ctrl.uiState" ng-if="uiState.nestedOption.length === 0">
             <div class="btn-group-cust" uib-dropdown>
-              <button id="{{uiState.stateName}}_ddl" class="btn btn-link-cust btn-lg" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
+              <button id="{{uiState.stateName}}_ddl" class="btn btn-lg btn-link-cust" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
                 {{ctrl.capitalizeUiState(uiState.stateName)}}
               </button>
             </div>
           </li>  
           <li ng-repeat-end ng-if="uiState.nestedOption.length > 0">
             <div class="btn-group-cust" uib-dropdown>
-              <button id="{{uiState.stateName}}_ddl" class="btn btn-link-cust btn-lg" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
+              <button id="{{uiState.stateName}}_ddl" class="btn btn-lg btn-link-cust" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
                 {{ctrl.capitalizeUiState(uiState.stateName)}}
               </button>
-              <button class="btn btn-link-cust btn-lg" uib-dropdown-toggle>
+              <button class="btn btn-lg btn-link-cust " uib-dropdown-toggle>
                 <span class="caret"></span>
                 <span class="sr-only">Split button!</span>
               </button>
@@ -81,7 +81,7 @@
             </div>           
           </li>          
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </nav>
 </div>
