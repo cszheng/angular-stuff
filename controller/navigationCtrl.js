@@ -3,14 +3,16 @@ app.controller('navigationCtrl', ['$window', '$scope', 'uiStateSvc', function($w
 	//variables bound to controller
 	self.uiState = null;
 	self.collapseNav = true;
+	
 	//functions bound to controller
+	//toggle collapse variable
 	self.toggleCollapse = function() {
-
 		self.collapseNav = !self.collapseNav;
 	}
+	//capitalize a word
 	self.capitalizeUiState = function(stateName) {
 		return stateName.replace(/\w\S*/g, function(text) {
-        return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+      return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
     });
 	}
 

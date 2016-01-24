@@ -42,7 +42,7 @@ app.service('uiStateSvc', ['$http', '$q', function($http, $q){
           "defaultSort": 0
         },
         {
-          "optionName": "entree",
+          "optionName": "entrée",
           "defaultSort": 1
         },
         {

@@ -28,12 +28,24 @@ app.run(['$state', '$location', 'uiStateSvc', function ($state, $location, uiSta
 	    //configure base state, this doesnt seem to be working
 			app.urlRouterProvider.otherwise('/' + uiSates[0].stateName);
 			//go to current path
-			var curPath = $location.$$path.replace(/\//g, '');
+			//var curPath = $location.$$path.replace(/(\/)(\w+)(\/\w+)*/, '$2');
+			var curPath = $location.$$path;
 			if(curPath === "") {
 				$state.go(uiSates[0].stateName);
 			}
 			else{
-				$state.go(curPath);
+				//split into state and params
+				var pathArr = curPath.split(/\//);
+				if (pathArr[0] === "") {
+					//remove first element in array, since it is empty string
+					pathArr.splice(0, 1);
+				}
+				var stateName = pathArr[0]; 
+				var params = {};
+				for(var i = 1; i < pathArr.length; i++) {
+					params['param' + i] = pathArr[i];
+				}
+				$state.go(stateName, params);
 			}
 		}, function(err) {
 			//data retrieve error
