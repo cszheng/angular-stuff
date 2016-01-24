@@ -1,4 +1,4 @@
-app.controller('menuCtrl', ['$document', '$stateParams', 'menuSvc', function($document, $stateParams, menuSvc) {
+app.controller('menuCtrl', ['$window', '$stateParams', 'menuSvc', function($window, $stateParams, menuSvc) {
 	var self = this;
 	//variables bound to controller
 	self.menu =  null;
@@ -14,9 +14,18 @@ app.controller('menuCtrl', ['$document', '$stateParams', 'menuSvc', function($do
 	}	
 
 	//private functions
-	var scrollToCategory = function(){
-
-
+	var scrollToCategory = function() {
+		var scrollToElem = document.querySelector('div[category=' + self.navCategory + ']');
+		if(scrollToElem !== null) {
+			var elementTop = scrollToElem.offsetTop;
+			var scrollOffset = 200;
+			setTimeout(function(){
+				$window.scrollTo(0, elementTop - scrollOffset);
+			}, TIMEOUT_CONST);
+		}
+		else{
+			setTimeout(scrollToCategory, TIMEOUT_CONST);
+		}
 	}
 
 	//initializer
