@@ -28,6 +28,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Basil Roll(2)",
             "description": "Shrimp, lettuce, beansprout, basil, rice noodle wrapped in rice paper. Served w. plum sauce, crushed peanut",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -39,6 +40,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Chicken Lettuce Wrap",
             "description": "Ground chicken, celery, carrot, basil stir fried in chef’s soy sauce over crispy rice noodles. Served w. side of lettuce",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -50,6 +52,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Crab Rangoon",
             "description": "Crab meat, cream cheese hand wrapped in wonton skin",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -61,6 +64,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Ebi Shuimai (6)",
             "description": "Pan fried or steamed shrimp dumpling ",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -72,6 +76,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Edamame",
             "description": "Steamed soy pod w. salt",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -83,6 +88,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Kimchi Chicken",
             "description": "Fried chicken breast seasoned in lightly spiced kimchi base",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -94,6 +100,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Pork Gyoza (6)",
             "description": "Pan fried or deep fried pork dumpling",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -105,6 +112,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Skewers (chicken or beef) (3)",
             "description": "Shrimp, lettuce, beansprout, basil, rice noodle wrapped in rice paper. Served w. plum sauce, crushed peanut",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -116,6 +124,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Spring roll (3)",
             "description": "Shrimp, lettuce, beansprout, basil, rice noodle wrapped in rice paper. Served w. plum sauce, crushed peanut",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -140,6 +149,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Habachi Chicken",
             "description": null,
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -151,6 +161,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Habachi Shrimp",
             "description": null,
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -162,6 +173,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Habachi Steak",
             "description": null,
+            "popular_count": 1,
             "variations": [
               {
                 "variation": null,
@@ -173,6 +185,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Habachi Tofu",
             "description": null,
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -190,6 +203,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Black Pepper",
             "description": "Sweet black pepper sauce w. bell pepper, onion, mushroom. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -216,6 +230,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Broccoli",
             "description": "Savory soy sauce w. broccoli, carrot. Choice of rice",
+            "popular_count": 1,
             "variations": [
               {
                 "variation": "Beef",
@@ -242,6 +257,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Kung Pao",
             "description": "Bell pepper, scallion, dried chili, peanut. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -268,6 +284,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Mongolian",
             "description": "Sweet soy sauce, onion, scallion over crispy noodle. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -294,6 +311,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Thai basil",
             "description": "Spicy basil sauce w. basil, string beans, bell pepper, onion. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -320,6 +338,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Orange chicken (available in chicken only)",
             "description": "Fried chicken in sweet, spicy orange sauce. Choice of rice",
+            "popular_count": 1,
             "variations": [
               {
                 "variation": "Chicken",
@@ -331,6 +350,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Sesame chicken (available in chicken only)",
             "description": "Fried chicken in sweet sesame sauce, sesame seeds. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Chicken",
@@ -342,6 +362,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Sweet & sour chicken (available in chicken only)",
             "description": "Fried chicken w. onion, bell pepper, pineapple in sweet & sour sauce. Choice of rice",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Chicken",
@@ -353,6 +374,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Fried rice",
             "description": "Stir fried rice w. egg, corn, pea, carrot, onion",
+            "popular_count": 2,
             "variations": [
               {
                 "variation": "Beef",
@@ -379,6 +401,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Lo mein",
             "description": "Stir fried egg noodle w. onion, scallion, carrot, bean sprout",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -405,6 +428,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Pad thai",
             "description": "Stir fried flat rice noodle w. egg, scallion, onion, carrot, bean sprout, crushed peanuts",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -431,6 +455,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Singapore curry noodle",
             "description": "Stir fried thin rice noodle, curry w. egg, scallion, onion, bell pepper, bean sprout",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -457,6 +482,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Yaki udon",
             "description": "Stir fried thick wheat noodle w. bean sprout, onion, scallion, carrot",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": "Beef",
@@ -496,6 +522,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Hot & Sour Soup",
             "description": "Tofu, mushrooms, egg, bamboo shoot",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -507,6 +534,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Miso Soup",
             "description": "Tofu, scallion, seaweed in soybean broth",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -518,6 +546,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Mushroom Soup",
             "description": "Mushroom, scallion in onion broth",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -529,6 +558,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Wonton Soup",
             "description": "Chicken wonton in onion broth",
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -553,6 +583,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Garden Salad",
             "description": null,
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,
@@ -564,6 +595,7 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
           {
             "name": "Seaweed Salad",
             "description": null,
+            "popular_count": 0,
             "variations": [
               {
                 "variation": null,

@@ -3,8 +3,9 @@ app.directive('panelDir', function(){
       restrict: 'E',
       scope: {},
       transclude: {
-        'panel-header': 'panelHeader',
-        'panel-body': 'panelBody'
+        'panel-header': '?panelHeader',
+        'panel-body': 'panelBody',
+        'panel-footer': '?panelFooter'
       },
       templateUrl: '/directive/panelDir.html'
     }

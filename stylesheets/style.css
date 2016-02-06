@@ -6731,6 +6731,7 @@ button.close {
   }
 }
 /*color themes*/
+/*media sizes*/
 .body-app {
   background-image: url("/images/background.jpg");
   font-color: #333333;
@@ -6993,7 +6994,7 @@ fieldset[disabled] .navbar-cust .btn-link-cust.focus {
 .panel-cust > .panel-heading {
   color: #222222;
   background-color: #eca225;
-  border-color: lignten(#eca225, 10%);
+  border-color: #f0b654;
 }
 .panel-cust > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #eca225;
@@ -7012,8 +7013,8 @@ fieldset[disabled] .navbar-cust .btn-link-cust.focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border: solid 1px lignten(#eca225, 10%);
-  background-color: lignten(#eca225, 10%);
+  border: solid 1px #f0b654;
+  background-color: #f0b654;
 }
 .panel-item-cust > .list-group,
 .panel-item-cust > .panel-collapse > .list-group {
@@ -7183,17 +7184,37 @@ fieldset[disabled] .navbar-cust .btn-link-cust.focus {
 }
 .panel-item-cust .panel-heading {
   color: #222222;
-  background-color: lignten(#eca225, 10%);
-  border-color: lignten(#eca225, 10%);
+  background-color: #f0b654;
+  border-color: #f0b654;
 }
 .panel-item-cust .panel-footer {
   color: #222222;
-  background-color: lignten(#eca225, 10%);
-  border-color: lignten(#eca225, 10%);
+  background-color: #f0b654;
+  border-color: #f0b654;
 }
 /* misc */
 .horizontal-rule {
   width: 100%;
   height: 5px;
   border-top: solid 1px #cc8712;
+}
+/* page container */
+.page-container {
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 1200px) {
+  .page-container {
+    width: 80%;
+  }
+}
+/* welcome page*/
+#welcome-img {
+  height: 400px;
+  display: inline;
+  background-color: #f0b654;
+}
+#welcome-text {
+  height: 400px;
+  display: inline;
+  background-color: #f0b654;
 }

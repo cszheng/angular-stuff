@@ -4,6 +4,13 @@
 
 @light-orange: #ffaa56;
 @orange: #eca225;
+@white: #ffffff;
+
+/*media sizes*/
+@xs-width: 480px;
+@sm-width: 768px;
+@md-width: 992px;
+@lg-width: 1200px;
 
 .body-app {
 	background-image: url("/images/background.jpg");
@@ -81,24 +88,24 @@
 
 /* custom panel */
 .panel-cust {
-	.panel-variant(@orange, @gray-darker, @orange, lignten(@orange, 10%));
+	.panel-variant(@orange, @gray-darker, @orange, lighten(@orange, 10%));
 }
 
 .panel-item-cust {
 	.panel();
-	border: solid 1px lignten(@orange, 10%);
-	background-color: lignten(@orange, 10%);
+	border: solid 1px lighten(@orange, 10%);
+	background-color: lighten(@orange, 10%);
 	
 	& .panel-heading {
     color: @gray-darker;
-    background-color: lignten(@orange, 10%);
-    border-color: lignten(@orange, 10%);
+    background-color: lighten(@orange, 10%);
+    border-color: lighten(@orange, 10%);
   }
   
   & .panel-footer {
     color: @gray-darker;
-    background-color: lignten(@orange, 10%);
-    border-color: lignten(@orange, 10%);
+    background-color: lighten(@orange, 10%);
+    border-color: lighten(@orange, 10%);
   }
 }
 
@@ -107,4 +114,27 @@
 	width: 100%;
 	height: 5px;
 	border-top: solid 1px darken(@orange, 10%);
+}
+
+/* page container */
+
+.page-container {
+	background-color: @white;
+
+	@media only screen and(min-width: @lg-width) {
+		width: 80%;
+	}
+}
+
+/* welcome page*/
+#welcome-img {
+	height: 400px;
+	display: inline;
+	background-color: lighten(@orange, 10%);
+}
+
+#welcome-text {
+	height: 400px;
+	display: inline;
+	background-color: lighten(@orange, 10%);
 }

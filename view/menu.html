@@ -1,4 +1,4 @@
-<div ng-controller="menuCtrl as ctrl">
+<div class="page-container container-fluid" ng-controller="menuCtrl as ctrl">
 	<div ng-repeat="category in ctrl.menu" category="{{category.name}}">
 	<panel-dir>
 		<panel-header>
@@ -16,18 +16,15 @@
 				</h4>
 				<div class="container-fluid">
 					<div class="row">
-						<div ng-repeat="item in group.items" ng-if="$index % 4 === 0">
-							<div class="col-lg-3 col-md-4" ng-if="$index < group.items.length">
+						<div ng-repeat="item in group.items" ng-if="$index % 3 === 0">
+							<div class="col-md-4" ng-if="$index < group.items.length">
 								<item-dir item="group.items[$index]"></item-dir>
 							</div>
-							<div class="col-lg-3 col-md-4" ng-if="$index + 1 < group.items.length">
+							<div class="col-md-4" ng-if="$index + 1 < group.items.length">
 								<item-dir item="group.items[$index + 1]"></item-dir>
 							</div>
-							<div class="col-lg-3 col-md-4" ng-if="$index + 2 < group.items.length">
+							<div class="col-md-4" ng-if="$index + 2 < group.items.length">
 								<item-dir item="group.items[$index + 2]"></item-dir>
-							</div>
-							<div class="col-lg-3 col-md-4" ng-if="$index + 3 < group.items.length"> 
-								<item-dir item="group.items[$index + 3]"></item-dir>
 							</div>
 						</div>
 					</div>
