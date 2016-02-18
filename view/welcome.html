@@ -1,24 +1,52 @@
-<div class="container-fluid page-container">
+<div class="container-fluid page-container" ng-controller="welcomeCtrl as ctrl">
 	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<img id="welcome-img" class="img-responsive col-md-8" src="images/main.png" />
-				<div id="welcome-text" class="col-md-4">
-					<h2>
-						We only use quality, fresh ingredients in all our dishes.
-					</h2>
-				</div>
-			</div>
-		</div>		
-	</div>
-	<div class="row">
-		<div class="col-md-8">
-
-		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<panel-dir>
 				<panel-header>
-					News Articles About Rice Mac
+					<h4>
+						Location
+					</h4>
+				</panel-header>
+				<panel-body>
+					<div class="row">						
+						<iframe src="//maps.google.com/maps?v=2&amp;f=q&amp;ie=UTF8&amp;t=m&amp;iwloc=&amp;q=2050+North+Decatur+Road%2c+Decatur%2c+GA+30033%2c+USA&amp;hl=en&amp;z=15&amp;source=s_q&amp;output=embed" style="width: 100%; height: 300px" scrolling="no"></iframe>
+					</div>
+				</panel-body>
+			</panel-dir>
+		</div>
+		<div class="col-md-9"><panel-dir>
+				<panel-header>
+					<h4>
+						Popular Dishes
+					</h4>
+				</panel-header>
+				<panel-body>
+					<div class="row">
+						<div class="col-md-3" ng-repeat="popItem in ctrl.popularDish">
+							<pop-item-dir item="popItem"></pop-item-dir>
+						</div>
+					</div>
+				</panel-body>
+				<panel-footer>
+					<div class="row">
+						<div class="col-md-6 text-left">
+							We only use quality, fresh ingredients in all our dishes.
+						</div>
+						<div class="col-md-6 text-right">
+							<a ui-sref="menu">See Our Full Menu</a>
+						</div>
+					</div>
+				</panel-footer>
+			</panel-dir>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<panel-dir>
+				<panel-header>
+					<h4>
+						News Articles About Rice Mac
+					</h4>
 				</panel-header>
 				<panel-body>
 					<ul class="list-group">

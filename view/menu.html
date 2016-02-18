@@ -3,29 +3,27 @@
 	<panel-dir>
 		<panel-header>
 			<h3>
-				{{ctrl.capitalizeWords(category.name)}}
+				{{ctrl.common.utilSvc.capitalize(category.name)}}
 			</h3> 
 			<h6>
-				{{ctrl.capitalizeWords(category.description)}}
+				{{ctrl.common.utilSvc.capitalize(category.description)}}
 			</h6> 
 		</panel-header>
 		<panel-body>
 			<div ng-repeat="group in category.item_groups">
 				<h4 class="text-center" ng-if="group.description !== null">
-					{{ctrl.capitalizeWords(group.description)}}
+					{{ctrl.common.utilSvc.capitalize(group.description)}}
 				</h4>
 				<div class="container-fluid">
-					<div class="row">
-						<div ng-repeat="item in group.items" ng-if="$index % 3 === 0">
-							<div class="col-md-4" ng-if="$index < group.items.length">
-								<item-dir item="group.items[$index]"></item-dir>
-							</div>
-							<div class="col-md-4" ng-if="$index + 1 < group.items.length">
-								<item-dir item="group.items[$index + 1]"></item-dir>
-							</div>
-							<div class="col-md-4" ng-if="$index + 2 < group.items.length">
-								<item-dir item="group.items[$index + 2]"></item-dir>
-							</div>
+					<div class="row" ng-repeat="item in group.items" ng-if="$index % 3 === 0">
+						<div class="col-md-4" ng-if="$index < group.items.length">
+							<item-dir item="group.items[$index]"></item-dir>
+						</div>
+						<div class="col-md-4" ng-if="$index + 1 < group.items.length">
+							<item-dir item="group.items[$index + 1]"></item-dir>
+						</div>
+						<div class="col-md-4" ng-if="$index + 2 < group.items.length">
+							<item-dir item="group.items[$index + 2]"></item-dir>
 						</div>
 					</div>
 				</div>

@@ -7202,11 +7202,6 @@ fieldset[disabled] .navbar-cust .btn-link-cust.focus {
 .page-container {
   background-color: #ffffff;
 }
-@media only screen and (min-width: 1200px) {
-  .page-container {
-    width: 80%;
-  }
-}
 /* welcome page*/
 #welcome-img {
   height: 400px;

@@ -1,21 +1,17 @@
-app.controller('navigationCtrl', ['$window', '$scope', 'uiStateSvc', function($window, $scope, uiStateSvc) {
+app.controller('navigationCtrl', ['$window', '$scope', 'utilSvc', 'uiStateSvc', function($window, $scope, utilSvc, uiStateSvc) {
 	var self = this;
+	//common services
+  //get some common serivces and attach to controller
+	self.common = {};
+	self.common.utilSvc = utilSvc;
 	//variables bound to controller
 	self.uiState = null;
-	self.collapseNav = true;
-	
+	self.collapseNav = true;	
 	//functions bound to controller
 	//toggle collapse variable
 	self.toggleCollapse = function() {
 		self.collapseNav = !self.collapseNav;
 	}
-	//capitalize a word
-	self.capitalizeUiState = function(stateName) {
-		return stateName.replace(/\w\S*/g, function(text) {
-      return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
-    });
-	}
-
 	//retrieve uiState from services
 	uiStateSvc
 		.getUiState()

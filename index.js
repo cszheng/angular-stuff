@@ -1,7 +1,10 @@
+//global constants
 var TIMEOUT_CONST = 100;
 
+//application
 var app = angular.module('restaurantapp', ['ngRoute', 'ngAnimate', 'ui.router', 'ui.bootstrap']);
 
+//config
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 	app.stateProvider = $stateProvider;
   app.urlRouterProvider = $urlRouterProvider;
@@ -9,6 +12,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
   $urlRouterProvider.deferIntercept();
 }]);
 
+//run
 app.run(['$state', '$location', 'uiStateSvc', function ($state, $location, uiStateSvc) {
 	//retrieve ui sates
 	uiStateSvc

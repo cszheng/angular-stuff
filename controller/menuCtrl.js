@@ -1,5 +1,8 @@
-app.controller('menuCtrl', ['$window', '$stateParams', 'menuSvc', function($window, $stateParams, menuSvc) {
+app.controller('menuCtrl', ['$window', '$stateParams', 'utilSvc', 'menuSvc', function($window, $stateParams, utilSvc, menuSvc) {
 	var self = this;
+	//get some common serivces and attach to controller
+	self.common = {};
+	self.common.utilSvc = utilSvc;
 	//variables bound to controller
 	self.menu =  null;
 	self.navCategory = $stateParams.param1 ? $stateParams.param1 : null;
@@ -12,7 +15,6 @@ app.controller('menuCtrl', ['$window', '$stateParams', 'menuSvc', function($wind
     	});
 		}
 	}	
-
 	//private functions
 	var scrollToCategory = function() {
 		var scrollToElem = document.querySelector('div[category=' + self.navCategory + ']');
@@ -27,7 +29,6 @@ app.controller('menuCtrl', ['$window', '$stateParams', 'menuSvc', function($wind
 			setTimeout(scrollToCategory, TIMEOUT_CONST);
 		}
 	}
-
 	//initializer
 	//retrieve menu from services
 	menuSvc

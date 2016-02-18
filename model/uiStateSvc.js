@@ -1,7 +1,8 @@
 app.service('uiStateSvc', ['$http', '$q', function($http, $q){
+  var self = this;
   var baseUrl = 'api/uiState';
 
-  this.getUiState = function() {
+  self.getUiState = function() {
     //return $http.get(baseUrl + '/all');
     //totally real rest api call
     var defer = $q.defer();
@@ -23,13 +24,13 @@ app.service('uiStateSvc', ['$http', '$q', function($http, $q){
       "defaultSort": 0,
       "nestedOption": []
     },
-    { 
-      "stateName": "location",
-      "templateUrl": "view/location.html",
-      "securityLevel": 0,
-      "defaultSort": 2,
-      "nestedOption": []
-    },  
+    // { 
+    //   "stateName": "location",
+    //   "templateUrl": "view/location.html",
+    //   "securityLevel": 0,
+    //   "defaultSort": 2,
+    //   "nestedOption": []
+    // },  
     { 
       "stateName": "menu",
       "templateUrl": "view/menu.html",

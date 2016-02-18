@@ -1,7 +1,9 @@
 app.service('menuSvc', ['$http', '$q', function($http, $q){
+  var self = this;  
+  //private variables
   var baseUrl = 'api/menu';
-
-  this.getMenu = function() {
+  //public functions
+  self.getMenu = function() {
     //return $http.get(baseUrl + '/all');
     //totally real rest api call
     var defer = $q.defer();
@@ -13,7 +15,33 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
     }, TIMEOUT_CONST);
     return defer.promise;
   }
-
+  //retrieves top items of itemCnt
+  self.getPopularItems = function(itemCnt) {
+    var defer = $q.defer();
+    setTimeout(function() {
+      //get the top itemCnt popular items
+      var popularItemLst = [];      
+      apiData.forEach(function(category){
+        //each category
+        category.item_groups.forEach(function(itemGrp){
+          //each item group
+          itemGrp.items.forEach(function(item){
+            //each item
+            //insert item into pop item
+            popularItemLst.push(item);
+          });
+        });
+      });
+      //sort popular item list
+      popularItemLst.sort(function(itemA, itemB){
+        return -1 * (itemA.popular_count - itemB.popular_count);
+      });
+      //slice the desired items
+      var topItemLst = popularItemLst.slice(0, itemCnt);
+      defer.resolve(topItemLst);
+    }, TIMEOUT_CONST);
+    return defer.promise;
+  }
   //totally real rest api data
   var apiData = [
   {
@@ -336,8 +364,8 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
             ]
           },
           {
-            "name": "Orange chicken (available in chicken only)",
-            "description": "Fried chicken in sweet, spicy orange sauce. Choice of rice",
+            "name": "Orange chicken",
+            "description": "Fried chicken in sweet, spicy orange sauce. Choice of rice. (available in chicken only)",
             "popular_count": 1,
             "variations": [
               {
@@ -348,8 +376,8 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
             ]
           },
           {
-            "name": "Sesame chicken (available in chicken only)",
-            "description": "Fried chicken in sweet sesame sauce, sesame seeds. Choice of rice",
+            "name": "Sesame chicken",
+            "description": "Fried chicken in sweet sesame sauce, sesame seeds. Choice of rice. (available in chicken only)",
             "popular_count": 0,
             "variations": [
               {
@@ -360,8 +388,8 @@ app.service('menuSvc', ['$http', '$q', function($http, $q){
             ]
           },
           {
-            "name": "Sweet & sour chicken (available in chicken only)",
-            "description": "Fried chicken w. onion, bell pepper, pineapple in sweet & sour sauce. Choice of rice",
+            "name": "Sweet & sour chicken",
+            "description": "Fried chicken w. onion, bell pepper, pineapple in sweet & sour sauce. Choice of rice. (available in chicken only)",
             "popular_count": 0,
             "variations": [
               {

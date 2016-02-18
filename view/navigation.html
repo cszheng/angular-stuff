@@ -53,14 +53,14 @@
           <li ng-repeat-start="uiState in ctrl.uiState" ng-if="uiState.nestedOption.length === 0">
             <div class="btn-group-cust" uib-dropdown>
               <button id="{{uiState.stateName}}_ddl" class="btn btn-lg btn-link-cust" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
-                {{ctrl.capitalizeUiState(uiState.stateName)}}
+                {{ctrl.common.utilSvc.capitalize(uiState.stateName)}}
               </button>
             </div>
           </li>  
           <li ng-repeat-end ng-if="uiState.nestedOption.length > 0">
             <div class="btn-group-cust" uib-dropdown>
               <button id="{{uiState.stateName}}_ddl" class="btn btn-lg btn-link-cust" ui-sref="{{uiState.stateName}}" ui-sref-active="active">
-                {{ctrl.capitalizeUiState(uiState.stateName)}}
+                {{ctrl.common.utilSvc.capitalize(uiState.stateName)}}
               </button>
               <button class="btn btn-lg btn-link-cust " uib-dropdown-toggle>
                 <span class="caret"></span>
@@ -69,7 +69,7 @@
               <ul class="nav-dropdown" role="menu" aria-labelledby="{{uiState.stateName}}_ddl" uib-dropdown-menu>
                 <li role="menuitem" ng-repeat="nestedOption in uiState.nestedOption" ui-sref="{{uiState.stateName}}({param1: nestedOption.optionName})">
                   <a href="#">
-                    {{ctrl.capitalizeUiState(nestedOption.optionName)}}
+                    {{ctrl.common.utilSvc.capitalize(nestedOption.optionName)}}
                   </a>
                 </li>
               </ul>
